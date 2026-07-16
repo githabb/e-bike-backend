@@ -283,7 +283,7 @@ async function openPayPalPayment(formData) {
             headers['Authorization'] = `Bearer ${token}`;
         }
 
-        const response = await fetch(`${API_BASE_URL}/payment/paypal/create`, {
+        const response = await fetch(`${API_BASE_URL}/api/payment/paypal/create`, {
             method: 'POST',
             headers,
             body: JSON.stringify(formData)
