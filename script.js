@@ -251,11 +251,7 @@ async function handleFormSubmit(event) {
     }
     
     // Проверяем сервер
-    const serverOk = await checkServerHealth();
-    if (!serverOk) {
-        showErrorMessage('Сервер недоступний. Перевір, чи запущений сервер на https://e-bike-backend-hl91.onrender.com');
-        return;
-    }
+    
     
     const formData = getFormData();
     disableSubmitButton();
