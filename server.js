@@ -259,8 +259,8 @@ async function createPayPalOrder(totalPrice, description) {
 ],
             application_context: {
     brand_name: 'E-Bike Rentals', //
-    return_url: `http://localhost:3000/payment-success.html`, // orderId ще не існує - замовлення створиться тільки після оплати
-    cancel_url: 'http://localhost:3000/payment-cancel.html', //
+    return_url: 'https://githubabb.github.io/e-bike-backend/payment-success.html',
+cancel_url: 'https://githubabb.github.io/e-bike-backend/payment-cancel.html',
     
     // --- ЗМІНИ ЦЕЙ РЯДОК З 'PAY' НА 'PAY_NOW' ---
     user_action: 'PAY_NOW'
