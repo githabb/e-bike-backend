@@ -28,9 +28,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, ''))); 
 
-app.get('/payment-success.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'payment-success.html'));
-});
+// app.get('/payment-success.html', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'payment-success.html'));
+// });
 
 // ==================== ПІДКЛЮЧЕННЯ ДО БД ====================
 
@@ -770,6 +770,11 @@ function normalizePhone(phone) {
 }
 
 // ==================== ОБРОБКА ПОМИЛОК ====================
+
+// Маршрут для перевірки стану сервера
+app.get('/health', (req, res) => {
+    res.json({ status: 'OK' });
+});
 
 app.use((req, res) => {
     res.status(404).json({
