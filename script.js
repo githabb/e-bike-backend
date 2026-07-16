@@ -253,7 +253,7 @@ async function handleFormSubmit(event) {
     // Проверяем сервер
     const serverOk = await checkServerHealth();
     if (!serverOk) {
-        showErrorMessage('Сервер недоступний. Перевір, чи запущений сервер на http://localhost:3000');
+        showErrorMessage('Сервер недоступний. Перевір, чи запущений сервер на https://e-bike-backend-hl91.onrender.com');
         return;
     }
     
@@ -518,7 +518,7 @@ async function init() {
         console.log('%c✅ Підключення до сервера встановлено', 'color: #00ff88; font-weight: bold;');
     } else {
         console.warn('%c⚠️ Сервер недоступний', 'color: #ffea00; font-weight: bold;');
-        showToast('⚠️ Сервер недоступний. Перевір, чи запущений сервер на http://localhost:3000', 'error');
+        showToast('⚠️ Сервер недоступний. Перевір, чи запущений сервер на https://e-bike-backend-hl91.onrender.com', 'error');
     }
     
     console.log('%c✅ Лендинг готовий!', 'font-size: 16px; color: #00ff88; font-weight: bold;');
